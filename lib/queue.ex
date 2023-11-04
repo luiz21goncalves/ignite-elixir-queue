@@ -1,18 +1,7 @@
 defmodule Queue do
-  @moduledoc """
-  Documentation for `Queue`.
-  """
+  use GenServer
 
-  @doc """
-  Hello world.
-
-  ## Examples
-
-      iex> Queue.hello()
-      :world
-
-  """
-  def hello do
-    :world
+  def init(state) do
+    {:ok, state}
   end
 end
