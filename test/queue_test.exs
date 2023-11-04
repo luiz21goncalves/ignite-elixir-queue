@@ -12,4 +12,12 @@ defmodule QueueTest do
       assert expected_response == response
     end
   end
+
+  describe "start_link/1" do
+    test "when call start_lint" do
+      response = Queue.start_link(%{})
+
+      assert {:ok, _} = response
+    end
+  end
 end
