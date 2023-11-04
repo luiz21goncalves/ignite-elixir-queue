@@ -20,4 +20,16 @@ defmodule QueueTest do
       assert {:ok, _} = response
     end
   end
+
+  describe "enqueue/2" do
+    test "when the state is empty" do
+      {:ok, pid} = Queue.start_link(%{})
+
+      response = Queue.enqueue(pid, 1)
+
+      expected_response = :ok
+
+      assert expected_response == response
+    end
+  end
 end
